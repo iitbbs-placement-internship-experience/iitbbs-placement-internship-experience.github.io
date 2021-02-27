@@ -440,7 +440,7 @@ function sendMailForResponse(email,entireHtmlCode){
         Password :  "Pwd@1234",
         To : email,
         From : "placementinternshipexperience@gmail.com",
-        Subject : "Filed response IIT BBS Placement Internship experience portal",
+        Subject : "Thanks for Filling the response @IIT BBS Placement Internship experience portal",
         Body :entireHtmlCode
     }).then(       
     );        
