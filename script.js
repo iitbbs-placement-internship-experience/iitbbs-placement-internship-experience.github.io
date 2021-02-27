@@ -384,6 +384,9 @@ for(var i=0;i<links.length;i++){
     htmlcode:entireHtmlCode
   }
   
+  // new part
+  sendMailForResponse(email,entireHtmlCode);
+  
   if(type=="internship"){
     console.log("Internship experience recorded") 
       internshipRef.push(experienceResponseData)
@@ -428,6 +431,21 @@ for(var i=0;i<links.length;i++){
   document.getElementById('submainResults').innerHTML="Processing your request...";
   document.getElementById('loaderAnime').style.display='block';  
 } 
+
+// new part
+function sendMailForResponse(email,entireHtmlCode){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "placementinternshipexperience@gmail.com",
+        Password :  "Pwd@1234",
+        To : email,
+        From : "placementinternshipexperience@gmail.com",
+        Subject : "Filed response IIT BBS Placement Internship experience portal",
+        Body :entireHtmlCode
+    }).then(       
+    );        
+}
+
 
 // ========= function for getting VALUE by ID ======
 function getInputVal(id){
